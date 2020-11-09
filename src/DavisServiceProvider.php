@@ -19,7 +19,7 @@ class DavisServiceProvider extends NewServiceProvider
     public function register()
     {
         $this->app->singleton(Weather::class, function () {
-            return new Weather(config('services.weather.key'));
+            return new Weather(config('weather.defaults.key'));
         });
 
         $this->app->alias(Weather::class, 'weather');
@@ -32,7 +32,7 @@ class DavisServiceProvider extends NewServiceProvider
 
     public function boot()
     {
-        $path = realpath(__DIR__.'/config.php');
+        $path = realpath(__DIR__ . '/config.php');
 
         $this->publishes([$path => config_path('weather.php')], 'config');
         $this->mergeConfigFrom($path, 'weather');
