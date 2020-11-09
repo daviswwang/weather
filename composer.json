@@ -1,0 +1,31 @@
+{
+  "name": "daviswwang/weather",
+  "description": "sdk",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "daviswwang",
+      "email": "130086230@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Daviswwang\\Weather\\": "./src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1.3",
+    "guzzlehttp/guzzle": "^6.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5",
+    "mockery/mockery": "^1.3"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Daviswwang\\Weather\\DavisServiceProvider"
+      ]
+    }
+  }
+}
