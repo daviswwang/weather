@@ -30,5 +30,13 @@ class DavisServiceProvider extends NewServiceProvider
         return [Weather::class, 'weather'];
     }
 
+    public function boot()
+    {
+        $path = realpath(__DIR__.'/config.php');
+
+        $this->publishes([$path => config_path('weather.php')], 'config');
+        $this->mergeConfigFrom($path, 'weather');
+    }
+
 
 }
