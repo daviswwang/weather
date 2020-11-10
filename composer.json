@@ -26,6 +26,9 @@
       "providers": [
         "Daviswwang\\Weather\\DavisServiceProvider"
       ]
+    },
+    "aliases": {
+      "Weather": "Daviswwang\\Weather\\Facades\\Weather"
     }
   }
 }
