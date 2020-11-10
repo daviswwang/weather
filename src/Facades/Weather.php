@@ -6,7 +6,7 @@
  * Time: 10:19
  */
 
-namespace Daviswwang\Weather;
+namespace Daviswwang\Weather\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
