@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Facade;
 
 class Weather extends Facade
 {
+    /**
+     * @method static array getLiveWeather(string $city)
+     * @method static array getLongWeather(string $city)
+     */
     protected static function getFacadeAccessor()
     {
         return 'weather';
